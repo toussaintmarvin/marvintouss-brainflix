@@ -10,7 +10,7 @@ const CommentSection = ({selectedVideo}) => {
 
     return (
         <>
-            {/* comment form */}
+            {/* form for comments */}
             <h3 className='comment-form__title'>3 Comments</h3>
             <section className='comment-form'>
                 <div className='comment-form__avatar'></div>
