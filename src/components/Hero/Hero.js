@@ -7,9 +7,7 @@ const Hero = ({selectedVideo}) => {
     return (
         <div className='hero__video-container'>
             <video controls className='hero__video' poster={selectedVideo.image}>
-                {/* added the video link as place holder even though 
-                we're not connected to the api yet, wasn't sure what the video format is */}
-                <source src={selectedVideo.video} type=""/>
+            <source src={`${selectedVideo.video}?api_key=9bd6ead6-03ac-4347-852d-ca77aaf28bd9`} type=""/>
                 Sorry, your browser doesn't support embedded videos.
             </video>
         </div>

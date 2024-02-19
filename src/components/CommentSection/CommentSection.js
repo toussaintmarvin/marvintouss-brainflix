@@ -7,6 +7,7 @@ import CommentCard from '../CommentCard/CommentCard';
 
 const CommentSection = ({selectedVideo}) => {
 
+    let currentVideoComments = selectedVideo.comments;
 
     return (
         <>
@@ -18,7 +19,10 @@ const CommentSection = ({selectedVideo}) => {
                     <label htmlFor='newComment' className='comment-form__label'>JOIN THE CONVERSATION</label>
                     <div className='comment-form__nonmobile-container'>
                         <textarea id='newComment' className='comment-form__input' placeholder='Add a new comment'></textarea>
-                        <button className='comment-form__button'>COMMENT</button>
+                        <button 
+                        className='comment-form__button'
+                        onClick={(event)=>event.preventDefault()}
+                        >COMMENT</button>
                     </div>
                 </form>
             </section>
@@ -27,9 +31,9 @@ const CommentSection = ({selectedVideo}) => {
             <section className='comment-section'>
                 {/* map through videoComment passed from App.js
                     and create a comment card for each */}
-                {selectedVideo.comments.map((e, i) => 
+                {currentVideoComments?.map((e) => 
                     <CommentCard        
-                        key = {i} 
+                        key = {e.id} 
                         commentComment = {e.comment}
                         commentName = {e.name}
                         commentTimestamp = {e.timestamp}
