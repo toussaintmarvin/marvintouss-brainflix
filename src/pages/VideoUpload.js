@@ -25,7 +25,7 @@ const VideoUpload = () => {
     const handleSubmit = (event) => {
       event.preventDefault();
       if(!videoTitle || !videoDesc) {
-        alert("Failed to upload, ensure all fields are filled!")
+        alert("Failed to upload")
         return;
       } else {
         alert ("Upload successful")
@@ -35,7 +35,7 @@ const VideoUpload = () => {
 
     return (
       <section className='upload'>
-        <h1 className='upload__title'>Upload Video</h1>
+        <h2 className='upload__title'>Upload Video</h2>
      
 
         {/* upload video form */}

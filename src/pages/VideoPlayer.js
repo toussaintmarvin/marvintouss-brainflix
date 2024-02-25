@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
 import Hero from '../components/Hero/Hero';
@@ -37,8 +37,13 @@ const VideoPlayer = () => {
         
     },[videoId])
 
-  return (
-    <>
+
+ 
+    
+    
+    return (
+   
+   <>
         <Hero 
             // pass selected video's detailed data
             //Hero component displays the selected video
@@ -65,6 +70,7 @@ const VideoPlayer = () => {
             />
 
         </section>
+        
     </>
   )
 }

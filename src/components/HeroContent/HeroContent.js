@@ -5,7 +5,9 @@ import viewIcon from '../../assets/images/views.svg';
 import likeIcon from '../../assets/images/likes.svg';
 
 const HeroContent =({selectedVideo}) => {
-  
+  if(!selectedVideo) {
+        return <h2>Loading...</h2>
+    }
   return (
     <section className='hero__content'>
                 <h1 className='hero__title'>{selectedVideo?.title}</h1>
