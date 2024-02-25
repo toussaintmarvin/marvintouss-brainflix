@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-import Hero from '../components/Hero/Hero'
+import Hero from '../components/Hero/Hero';
 import CommentSection from '../components/CommentSection/CommentSection';
 import VideoList from '../components/VideoList/VideoList';
 import HeroContent from '../components/HeroContent/HeroContent';
