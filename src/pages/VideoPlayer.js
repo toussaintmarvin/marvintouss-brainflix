@@ -13,7 +13,7 @@ const VideoPlayer = () => {
     const {videoId} = useParams()
 
     const [videoArray, setVideoArray] = useState();
-    const [selectedVideo, setSelectedVideo] = useState();
+    const [selectedVideo, setSelectedVideo] = useState(null);
 
     //pulls array of video data
     useEffect(() => {
@@ -39,7 +39,11 @@ const VideoPlayer = () => {
 
 
  
-    
+    if (!selectedVideo) {
+        return (
+            <p>Loading...</p>
+        )
+    }
     
     return (
    
